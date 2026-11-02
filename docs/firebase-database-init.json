@@ -1,0 +1,9 @@
+{
+  "hand_gesture": {
+    "current": {
+      "fingers": 0,
+      "gesture": "No Hand",
+      "timestamp": 0
+    }
+  }
+}

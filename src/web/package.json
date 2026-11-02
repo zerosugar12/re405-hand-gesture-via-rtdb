@@ -1,0 +1,33 @@
+{
+  "name": "hand-gesture-dashboard",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "web": "vite",
+    "python": "fuser -k 5002/tcp 2>/dev/null; python ../python/main.py",
+    "dev": "concurrently -n python,react -c yellow,cyan --kill-others \"npm run python\" \"npm run web\"",
+    "stop": "lsof -ti :5002 | xargs kill -9 2>/dev/null; echo 'Server stopped'",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "chart.js": "^4.4.0",
+    "firebase": "^10.7.0",
+    "react": "^19.0.0",
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "^19.0.0",
+
+    "react-icons": "^5.0.0",
+    "react-router-dom": "^7.0.0",
+    "react-toastify": "^10.0.0",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.0",
+    "@vitejs/plugin-react": "^4.3.0",
+    "concurrently": "^9.2.1",
+    "tailwindcss": "^4.0.0",
+    "vite": "^6.0.0"
+  }
+}
